@@ -30,7 +30,6 @@ dataset:
   - _component_: dataset.flytech_python_codes
   - _component_: dataset.python_code_instructions_alpaca
   - _component_: dataset.code_feedback_filtered_instruction
-  - _component_: dataset.flytech_python_codes
 seed: null
 shuffle: True
 
@@ -55,7 +54,7 @@ epochs: 5
 
 optimizer:
   _component_: torch.optim.AdamW
-  lr: 2e-5
+  lr: 1e-4
   fused: True
 loss:
   _component_: torchtune.modules.loss.CEWithChunkedOutputLoss
